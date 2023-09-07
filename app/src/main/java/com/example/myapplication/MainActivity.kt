@@ -43,6 +43,8 @@ import com.example.myapplication.ui.theme.CardItem
 import com.example.myapplication.ui.theme.MyApplicationTheme
 
 
+
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,9 +52,11 @@ class MainActivity : ComponentActivity() {
             MyApplicationTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(
+
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+
                     EventGrid()
                 }
             }
@@ -60,11 +64,13 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
+@Preview
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun EventGrid(modifier: Modifier = Modifier) {
     val context = LocalContext.current
+
+
     val events = listOf(
         CardItem(BitmapFactory.decodeResource(context.resources, R.drawable.evento1), "Concierto", "Dua lipa"),
                 CardItem(BitmapFactory.decodeResource(context.resources, R.drawable.eventoteatro1), "Teatro", "Obra graciosa"),
