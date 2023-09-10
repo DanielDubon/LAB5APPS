@@ -1,4 +1,4 @@
-package com.example.myapplication.Perfil
+package com.example.myapplication.ui.theme.ui.Perfil
 
 import android.graphics.Bitmap
 
